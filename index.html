@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo PET</title>
+    <!-- <link rel="stylesheet" href="styles/index.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="/assets/logo.svg" alt="Logo Mundo Pet" />
+    </header>
+    <main>
+      <div class="main-header">
+        <div>
+          <h1>Sua agenda</h1>
+          <p>
+            Aqui você pode ver todos os clientes e serviços agendados para hoje.
+          </p>
+        </div>
+        <div class="calendar">
+          <img src="/assets/calendar.svg" alt="" />
+          <input type="date" name="" id="" />
+          <img src="/assets/down-arrow.svg" alt="" />
+        </div>
+      </div>
+      <div class="schedule" id="morning">
+        <div class="schedule-header">
+          <div class="shift">
+            <img src="/assets/sun-fog.svg" alt="ícone de nascer do sol" />
+            <h2>Manhã</h2>
+          </div>
+          <h3>09h-12h</h3>
+        </div>
+        <hr />
+        <div class="appointments">
+          <div class="appointment-item">
+            <strong>09:00</strong>
+            <div class="client-schedule">
+              <p class="client"><span>Thor</span> / Fernanda Costa</p>
+              <p class="service">Vacinação</p>
+              <button type="button">Remover agendamento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="schedule" id="afternoon">
+        <div class="schedule-header">
+          <div class="shift">
+            <img src="/assets/cloud-sun.svg" alt="ícone de sol nublado" />
+            <h2>Tarde</h2>
+          </div>
+          <h3>13h-18h</h3>
+        </div>
+        <hr />
+        <div class="appointments">
+          <div class="appointment-item">
+            <strong>13:00</strong>
+            <div class="client-schedule">
+              <p class="client"><span>Mel</span> / João Souza</p>
+              <p class="service">Corte de Unhas</p>
+              <button type="button">Remover agendamento</button>
+            </div>
+          </div>
+          <hr class="client-border" />
+          <div class="appointment-item">
+            <strong>14:00</strong>
+            <div class="client-schedule">
+              <p class="client"><span>Bella</span> / Pedro Martins</p>
+              <p class="service">Aplicação de Anti-pulgas</p>
+              <button type="button">Remover agendamento</button>
+            </div>
+          </div>
+          <hr class="client-border" />
+          <div class="appointment-item">
+            <strong>15:00</strong>
+            <div class="client-schedule">
+              <p class="client"><span>Simba</span> / Juliana Rocha</p>
+              <p class="service">Tosa Higiênica</p>
+              <button type="button">Remover agendamento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="schedule" id="night">
+        <div class="schedule-header">
+          <div class="shift">
+            <img src="/assets/moon-stars.svg" alt="ícone de lua" />
+            <h2>Noite</h2>
+          </div>
+          <h3>18h-21h</h3>
+        </div>
+        <hr />
+        <div class="appointments">
+          <div class="appointment-item">
+            <strong>20:00</strong>
+            <div class="client-schedule">
+              <p class="client"><span>Max</span> / Camila Santos</p>
+              <p class="service">Limpeza de Dentes</p>
+              <button type="button">Remover agendamento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <button type="button" id="newAppointment">NOVO AGENDAMENTO</button>
+      </footer>
+    </main>
+    <div id="modal-overlay">
+      <div class="modal">
+        <header class="modal-header">
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+        <form action="submit">
+          <label for="user-name">Nome do tutor</label>
+          <div class="appointment-input">
+            <img src="/assets/user.svg" alt="" /><input
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Nome do tutor"
+            />
+          </div>
+          <label for="pet-name">Nome do pet</label>
+          <div class="appointment-input">
+            <img src="/assets/pet-paw.svg" alt="" />
+            <input
+              type="text"
+              name="pet-name"
+              id="pet-name"
+              placeholder="Nome do pet"
+            />
+          </div>
+          <label for="telephone">Telefone</label>
+          <div class="appointment-input">
+            <img src="/assets/phone.svg" alt="" /><input
+              type="tel"
+              name="telephone"
+              id="telephone"
+              placeholder="(00) 0 0000-0000"
+            />
+          </div>
+          <label for="service-description">Descrição do serviço</label
+          ><textarea
+            name="service-description"
+            id="service-description"
+            placeholder="Serviço"
+          ></textarea>
+          <div class="appointment-date">
+            <div class="date">
+              <label for="date">Data</label>
+              <div class="appointment-input">
+                <img src="/assets/calendar.svg" alt="" /><input
+                  type="date"
+                  name="date"
+                  id="date"
+                /><img src="/assets/down-arrow.svg" alt="" />
+              </div>
+            </div>
+            <div class="time">
+              <label for="time">Hora</label>
+              <div class="appointment-input">
+                <img src="/assets/clock.svg" alt="" /><input
+                  type="time"
+                  name="time"
+                  id="time"
+                /><img src="/assets/down-arrow.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <button type="button" id="appointment-submit">AGENDAR</button>
+        </form>
+      </div>
+    </div>
+     <script type="module" src="main.js"></script>
+  </body>
+</html>
