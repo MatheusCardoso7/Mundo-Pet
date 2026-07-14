@@ -1,0 +1,101 @@
+#modal-overlay {
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 22px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: fixed;
+}
+
+.modal {
+  width: 29.813rem;
+  height: 46.3rem;
+  background-color: var(--background-tertiary);
+  border-radius: 12px;
+  padding: 2.5rem;
+
+  & .modal-header {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+    & h1 {
+      font: var(--title-lg);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+  }
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    & input {
+      appearance: none;
+      border: none;
+      background: transparent;
+      inset: 0;
+      flex: 1;
+      height: max-content;
+      font: var(--date);
+      color: var(--content-secondary);
+    }
+    & textarea {
+      min-height: 5.625rem;
+      background: transparent;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-primary);
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font: var(--date);
+      color: var(--content-secondary);
+    }
+  }
+  & .appointment-input {
+    display: flex;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-primary);
+    align-items: center;
+    gap: 0.5rem;
+  }
+  & label {
+    margin-top: 1rem;
+    font: var(--label-medium);
+    color: var(--content-primary);
+  }
+  & .appointment-date {
+    display: flex;
+    gap: 1rem;
+    & .date,
+    .time {
+      width: 100%;
+      & input {
+        font: var(--date);
+        color: var(--content-secondary);
+        &::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      }
+    }
+  }
+  & button {
+    margin-top: 1.75em;
+    background-color: var(--content-brand);
+    padding: 0.75rem 1.5rem;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font: var(--label-large);
+    color: var(--background-primary);
+    width: fit-content;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --title-family: "Inter Tight", sans-serif;
+  --title-lg: 700 1.5rem/2rem var(--title-family);
+  --title-md: 700 1rem/1.5rem var(--title-family);
+
+  --paragraph-medium: 500 0.875rem/1.5rem var(--font-family);
+  --paragraph-small: 500 0.75rem/1rem var(--font-family);
+  --label-large: 700 1rem/1.5rem var(--font-family);
+  --label-medium: 700 0.875rem/1.5rem var(--font-family);
+  --label-small: 700 0.75rem/1rem var(--font-family);
+  --link: 500 0.75rem/1rem var(--font-family);
+  --date: 500 1rem/150% var(--font-family);
+
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4f4;
+
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+}
+
+body {
+  width: 100%;
+  background-color: #14151d;
+  align-content: center;
+  justify-items: center;
+}
+
+header {
+  z-index: 1000;
+  display: flex;
+  margin-right: auto;
+  & img {
+    background-color: var(--background-tertiary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0rem 0rem 0.75rem 0rem;
+  }
+}
+
+main {
+  width: 871px;
+  & .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 0.875rem;
+    & h1 {
+      font: var(--title-lg);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+    & .calendar {
+      display: flex;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-primary);
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    & input[type="date"] {
+      flex: 1;
+      font: var(--date);
+      color: var(--content-secondary);
+      background: transparent;
+      border: none;
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+  }
+}
+
+#morning,
+#afternoon,
+#night {
+  background-color: var(--background-tertiary);
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  & h3 {
+    font: var(--title-md);
+    color: var(--content-secondary);
+  }
+  & .shift {
+    display: flex;
+    gap: 0.75rem;
+    h2 {
+      font: var(--title-md);
+      color: var(--content-primary);
+    }
+  }
+}
+
+.appointments {
+  padding: 1.25rem;
+}
+
+.appointment-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  & strong {
+    font: var(--label-medium);
+    color: var(--content-primary);
+    padding: 1rem;
+  }
+  & p {
+    font: var(--paragraph-small);
+    color: var(--content-secondary);
+    & span {
+      font: var(--label-small);
+      color: var(--content-primary);
+    }
+  }
+  & button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    font: var(--paragraph-small);
+    color: var(--content-tertiary);
+    margin-left: auto;
+  }
+}
+
+.client-schedule {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.service {
+  justify-self: center;
+  width: 200px;
+  text-align: left;
+}
+
+hr {
+  border-color: var(--border-divisor);
+  opacity: 0.1;
+}
+
+.client-border {
+  width: 100%;
+  justify-self: center;
+}
+
+footer {
+  position: absolute;
+  right: 2rem;
+  & button {
+    display: flex;
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    appearance: none;
+    border: none;
+    border-radius: 8px;
+    background: var(--content-brand);
+    font: var(--title-md);
+    color: var(--background-primary);
+    margin-bottom: 2rem;
+  }
+}
