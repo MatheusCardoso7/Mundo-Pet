@@ -1,1 +1,27 @@
-{ "appointments": [] }
+{
+  "appointments": [
+    {
+      "appointment": {
+        "userName": "Matheus Cardoso",
+        "petName": "Tobi",
+        "phone": "51995111650",
+        "description": "Banho e tosa",
+        "date": "2026-07-17",
+        "time": "14:30"
+      },
+      "id": "bw0gHO5EqDI"
+    },
+    {
+      "appointment": {
+        "userName": "Matheus Cardoso",
+        "petName": "Tobi",
+        "phone": "51995111650",
+        "description": "Banho e tosa",
+        "date": "2026-07-17",
+        "time": "14:30"
+      },
+      "id": "Jzsb_nWKbiI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

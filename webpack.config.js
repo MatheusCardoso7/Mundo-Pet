@@ -17,18 +17,18 @@ module.exports = {
     },
     port: 3000,
     open: true,
-    liveReload: true,
+    hot: false,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
-      favicon: path.resolve("src", "assets", "scissors.svg"),
+      favicon: path.resolve("src", "assets", "pet-paw.svg"),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, "src", "assets"),
-          to: path.resolve(__dirname, "dist", "src", "assets"),
+          to: path.resolve(__dirname, "dist", "assets"),
         },
       ],
     }),

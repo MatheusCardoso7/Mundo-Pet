@@ -1,10 +1,11 @@
 import { validations } from "../utils/validantion.js"
 import { closeModal } from "./modal.js"
+import { appointmentNew } from "../services/appointments.js"
 
 export function initializeForm() {
   const appointmentSubmit = document.getElementById("appointment-submit")
 
-  appointmentSubmit.addEventListener("click", (event) => {
+  appointmentSubmit.addEventListener("click", async (event) => {
     event.preventDefault()
 
     const userNameInput = document.getElementById("user-name")
@@ -37,6 +38,8 @@ export function initializeForm() {
       date,
       time,
     }
+
+    await appointmentNew({ appointment })
 
     closeModal()
   })

@@ -9,7 +9,9 @@ initializeModal()
 initializeForm()
 
 //CSS
-import "./styles"
-import "./styles/global.css"
-import "./styles/form.css"
-import "./styles/schedule.css"
+/* import "./styles" */
+import "./styles/index.css"
+import "./styles/styles.css"
+import "./styles/modal.css"
+
+import "./modules/schedule.js"

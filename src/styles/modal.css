@@ -21,6 +21,12 @@
     gap: 0.25rem;
     flex-direction: column;
     margin-bottom: 0.75rem;
+    position: relative;
+    & img {
+      position: absolute;
+      right: -25px;
+      top: -30px;
+    }
     & h1 {
       font: var(--title-lg);
       color: var(--content-primary);
@@ -64,15 +70,19 @@
     border: 1px solid var(--border-primary);
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 1rem;
   }
   & label {
-    margin-top: 1rem;
     font: var(--label-medium);
     color: var(--content-primary);
   }
   & .appointment-date {
     display: flex;
     gap: 1rem;
+    & img {
+      cursor: pointer;
+      
+    }
     & .date,
     .time {
       width: 100%;
@@ -80,7 +90,10 @@
         font: var(--date);
         color: var(--content-secondary);
         &::-webkit-calendar-picker-indicator {
-          display: none;
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          cursor: pointer;
         }
       }
     }
