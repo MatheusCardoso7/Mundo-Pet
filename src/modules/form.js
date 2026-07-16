@@ -1,8 +1,10 @@
 import { validations } from "../utils/validantion.js"
 import { closeModal } from "./modal.js"
-import { appointmentNew } from "../services/appointments.js"
+import { appointmentNew } from "../services/appointment-new.js"
+import { appointmentsDay } from "./load-appointment.js";
 
 export function initializeForm() {
+    console.log("initializeForm executou");
   const appointmentSubmit = document.getElementById("appointment-submit")
 
   appointmentSubmit.addEventListener("click", async (event) => {
@@ -40,6 +42,8 @@ export function initializeForm() {
     }
 
     await appointmentNew({ appointment })
+
+    appointmentsDay()
 
     closeModal()
   })

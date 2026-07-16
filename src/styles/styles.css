@@ -49,9 +49,10 @@ body {
   background-color: #14151d;
   align-content: center;
   justify-items: center;
+  overflow-x: hidden
 }
 
-header {
+.logo {
   z-index: 1000;
   display: flex;
   margin-right: auto;
@@ -131,12 +132,18 @@ main {
 
 .appointments {
   padding: 1.25rem;
+  & li + li {
+    border-top: 1px solid;
+    border-color: var(--border-divisor);
+    
+  }
 }
 
 .appointment-item {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  
 
   & strong {
     font: var(--label-medium);

@@ -14,4 +14,7 @@ import "./styles/index.css"
 import "./styles/styles.css"
 import "./styles/modal.css"
 
+// JS
 import "./modules/schedule.js"
+import "./modules/date-change.js"
+import "./modules/cancel-appointment.js"
