@@ -19,9 +19,6 @@ export function showAppointments({ dailyAppointments }) {
       const scheduleService = document.createElement("p")
       const scheduleRemove = document.createElement("button")
 
-      // borda entre agendamentos (hr)
-      scheduleBorder.classList.add("client-border")
-
       // li
       scheduleItem.classList.add("appointment-item")
 
@@ -51,7 +48,7 @@ export function showAppointments({ dailyAppointments }) {
       scheduleItem.append(scheduleTime, clientDiv)
 
       // Obtém apenas a hora para fazer o if
-      const hour = dayjs(schedule.when).hour()
+      const hour = dayjs(appointment.time).hour()
 
       if(hour < 12){
         morningAppointments.append(scheduleItem)

@@ -1,4 +1,4 @@
-import { validations } from "../utils/validantion.js"
+import { validations } from "../utils/validation.js";
 import { closeModal } from "./modal.js"
 import { appointmentNew } from "../services/appointment-new.js"
 import { appointmentsDay } from "./load-appointment.js";
