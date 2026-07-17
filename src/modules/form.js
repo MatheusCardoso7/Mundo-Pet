@@ -4,7 +4,6 @@ import { appointmentNew } from "../services/appointment-new.js"
 import { appointmentsDay } from "./load-appointment.js";
 
 export function initializeForm() {
-    console.log("initializeForm executou");
   const appointmentSubmit = document.getElementById("appointment-submit")
 
   appointmentSubmit.addEventListener("click", async (event) => {
@@ -41,7 +40,7 @@ export function initializeForm() {
       time,
     }
 
-    await appointmentNew({ appointment })
+    await appointmentNew(appointment)
 
     appointmentsDay()
 

@@ -1,6 +1,6 @@
 import { apiConfig } from "./api-config.js"
 
-export async function appointmentNew({ appointment }) {
+export async function appointmentNew(appointment) {
   try {
     // Fazendo a requisição para enviar os dados do agendamento.
     await fetch(`${apiConfig.baseURL}/appointments`, {
@@ -8,7 +8,7 @@ export async function appointmentNew({ appointment }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ appointment }),
+      body: JSON.stringify(appointment),
     })
 
     // Exibe uma mensagem de agendamento realizado.

@@ -12,103 +12,114 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-  <link rel="icon" href="pet-paw.svg"></head>
+  <link rel="icon" href="pet-paw.svg"><script defer src="main.js"></script></head>
   <body>
-    <header>
+    <header class="logo">
       <img src="/assets/logo.svg" alt="Logo Mundo Pet" />
     </header>
     <main>
-      <div class="main-header">
+      <header class="main-header">
         <div>
           <h1>Sua agenda</h1>
           <p>
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
           </p>
         </div>
-        <label class="calendar">
+        <div class="calendar">
           <img src="/assets/calendar.svg" alt="" />
           <input type="date" name="" id="schedule-date" />
           <img src="/assets/down-arrow.svg" alt="" />
-        </label>
-      </div>
-      <div class="schedule" id="morning">
-        <div class="schedule-header">
+        </div>
+      </header>
+
+      <section class="schedule" id="morning">
+        <header class="schedule-header">
           <div class="shift">
             <img src="/assets/sun-fog.svg" alt="ícone de nascer do sol" />
             <h2>Manhã</h2>
           </div>
           <h3>09h-12h</h3>
-        </div>
+        </header>
         <hr />
-        <div class="appointments">
-          <div class="appointment-item">
+
+        <ul class="appointments" id="morning-appointments">
+          <li class="appointment-item">
             <strong>09:00</strong>
             <div class="client-schedule">
               <p class="client"><span>Thor</span> / Fernanda Costa</p>
               <p class="service">Vacinação</p>
               <button type="button">Remover agendamento</button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="schedule" id="afternoon">
-        <div class="schedule-header">
+          </li>
+        </ul>
+      </section>
+
+      <section class="schedule" id="afternoon">
+        <header class="schedule-header">
           <div class="shift">
             <img src="/assets/cloud-sun.svg" alt="ícone de sol nublado" />
             <h2>Tarde</h2>
           </div>
           <h3>13h-18h</h3>
-        </div>
+        </header>
         <hr />
-        <div class="appointments">
-          <div class="appointment-item">
+
+        <ul class="appointments" id="afternoon-appointments">
+
+          <!-- <li class="appointment-item">
             <strong>13:00</strong>
             <div class="client-schedule">
               <p class="client"><span>Mel</span> / João Souza</p>
               <p class="service">Corte de Unhas</p>
               <button type="button">Remover agendamento</button>
             </div>
-          </div>
-          <hr class="client-border" />
-          <div class="appointment-item">
+          </li>
+
+          
+          <li class="appointment-item">
             <strong>14:00</strong>
             <div class="client-schedule">
               <p class="client"><span>Bella</span> / Pedro Martins</p>
               <p class="service">Aplicação de Anti-pulgas</p>
               <button type="button">Remover agendamento</button>
             </div>
-          </div>
-          <hr class="client-border" />
-          <div class="appointment-item">
+          </li>
+
+          <li class="appointment-item">
             <strong>15:00</strong>
             <div class="client-schedule">
               <p class="client"><span>Simba</span> / Juliana Rocha</p>
               <p class="service">Tosa Higiênica</p>
               <button type="button">Remover agendamento</button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="schedule" id="night">
-        <div class="schedule-header">
+          </li> -->
+          
+        </ul>
+      </section>
+
+      <section class="schedule" id="night">
+        <header class="schedule-header">
           <div class="shift">
             <img src="/assets/moon-stars.svg" alt="ícone de lua" />
             <h2>Noite</h2>
           </div>
           <h3>18h-21h</h3>
-        </div>
+        </header>
         <hr />
-        <div class="appointments">
-          <div class="appointment-item">
+
+        <ul class="appointments" id="night-appointments">
+         <!--  <li class="appointment-item">
             <strong>20:00</strong>
             <div class="client-schedule">
               <p class="client"><span>Max</span> / Camila Santos</p>
               <p class="service">Limpeza de Dentes</p>
               <button type="button">Remover agendamento</button>
             </div>
-          </div>
-        </div>
-      </div>
+          </li> -->
+          
+        </ul>
+      </section>
+      
       <footer>
         <button type="button" id="newAppointment">NOVO AGENDAMENTO</button>
       </footer>
@@ -116,7 +127,7 @@
     <div id="modal-overlay">
       <div class="modal">
         <header class="modal-header">
-          <img src="/src/assets/close.svg" alt="x para fechar janela">
+          <img id="close-icon" src="/assets/close.svg" alt="x para fechar janela">
           <h1>Agende um atendimento</h1>
           <p>Preencha os dados do cliente para realizar o agendamento:</p>
         </header>
@@ -188,6 +199,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="main.js"></script>
   </body>
 </html>

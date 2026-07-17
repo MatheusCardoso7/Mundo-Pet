@@ -3,14 +3,14 @@ import { apiConfig } from "./api-config.js"
 
 export async function appointmentsFetchByDay({ date }) {
   try {
-    // Fazendo a requisição.
     const response = await fetch(`${apiConfig.baseURL}/appointments`)
-
-    // Converte para JSON.
     const data = await response.json()
 
-    // Filtra os agendamentos pelo dia selecionado.
-    const dailyAppointments = data.filter((appointment) => dayjs(date).isSame(appointment.when, "day"))
+    const dailyAppointments = data.filter((appointment) => {
+      const appointmentDate = appointment?.date
+
+      return dayjs(date).isSame(appointmentDate, "day")
+    })
 
     return dailyAppointments
   } catch (error) {

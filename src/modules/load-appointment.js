@@ -7,7 +7,6 @@ const selectedDate = document.getElementById("schedule-date")
 export async function appointmentsDay() {
   // Obtém a data do input
   const date = selectedDate.value
-console.log(date)
   // Busca na API os agendamentos
   const dailyAppointments = await appointmentsFetchByDay({ date })
   

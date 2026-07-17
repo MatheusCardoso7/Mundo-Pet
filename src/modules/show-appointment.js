@@ -21,9 +21,10 @@ export function showAppointments({ dailyAppointments }) {
 
       // li
       scheduleItem.classList.add("appointment-item")
+      scheduleItem.dataset.id = appointment.id
 
       // Horário do agendamento (strong)
-      scheduleTime.textContent = dayjs(appointment.time).format("HH:mm")
+      scheduleTime.textContent = appointment.time
 
       // Nome do pet (span) + cliente (p)
       schedulePet.textContent = appointment.petName
@@ -48,11 +49,11 @@ export function showAppointments({ dailyAppointments }) {
       scheduleItem.append(scheduleTime, clientDiv)
 
       // Obtém apenas a hora para fazer o if
-      const hour = dayjs(appointment.time).hour()
+      const hour = Number(appointment.time.split(":")[0])
 
-      if(hour < 12){
+      if (hour <= 12) {
         morningAppointments.append(scheduleItem)
-      } else if (hour > 12 && hour <= 18) {
+      } else if (hour < 18) {
         afternoonAppointments.append(scheduleItem)
       } else {
         nightAppointments.append(scheduleItem)

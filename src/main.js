@@ -4,9 +4,11 @@ import "./libs/dayjs.js"
 
 import { initializeModal } from "./modules/modal.js"
 import { initializeForm } from "./modules/form.js"
+import { appointmentsDay } from "./modules/load-appointment.js"
 
 initializeModal()
 initializeForm()
+appointmentsDay()
 
 //CSS
 /* import "./styles" */

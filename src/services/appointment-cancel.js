@@ -2,7 +2,6 @@ import { apiConfig } from "./api-config.js"
 
 export async function appointmentCancel({ id }) {
   try {
-    console.log(id)
     await fetch(`${apiConfig.baseURL}/appointments/${id}`, {
       method: "DELETE",
     })

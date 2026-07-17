@@ -7,7 +7,7 @@ const periods = document.querySelectorAll(".appointments")
 periods.forEach((period) => {
   // Captura o evento de clique na lista.
   period.addEventListener("click", async (event) => {
-    if (event.target.classList.contains("cancel-button")) {
+    if (event.target.classList.contains("remove-button")) {
       // Obtém a li pai do elemento clicado.
       const item = event.target.closest("li")
 
@@ -23,10 +23,10 @@ periods.forEach((period) => {
 
         if (isConfirm) {
           // Faz a requisição na API para cancelar.
-          await scheduleCancel({ id })
+          await appointmentCancel({ id })
 
           // Recarrega os agendamentos.
-          schedulesDay()
+          appointmentsDay()
         }
       }
     }
